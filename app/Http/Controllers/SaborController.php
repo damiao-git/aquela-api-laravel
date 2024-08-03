@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Sabor;
-use Illuminate\Http\Request;
 
 class SaborController extends Controller
 {
 
-/**
+    /**
      * @OA\Get(
      *     path="/api/sabores",
      *     summary="Listar todos os sabores",
@@ -19,12 +18,12 @@ class SaborController extends Controller
      *     )
      * )
      */
-        public function index()
+    public function index()
     {
         return response()->json(Sabor::all());
     }
 
-      /**
+    /**
      * @OA\Get(
      *     path="/api/sabores/{id}",
      *     summary="Buscar sabor por ID",
@@ -51,6 +50,6 @@ class SaborController extends Controller
         if ($sabor) {
             return response()->json($sabor);
         }
-        return response()->json(['message' => 'Sabor não encontrado'], 404);
+        return response()->json(['mensagem' => 'Sabor não encontrado'], 404);
     }
 }

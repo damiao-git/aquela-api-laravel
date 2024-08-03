@@ -1,17 +1,22 @@
 # API de Sabores de Sorvete
 
 Cada etapa do desenvolvimento dessa API foi testada separadamente seguindo a ordem dos commits. 
-1 - Criação da API sem segurança;
-2 - Inserção do swagger
-Esta é uma API RESTful desenvolvida em PHP utilizando o framework Laravel. A API permite listar e buscar sabores de sorvete por ID. A API é protegida por autenticação JWT e a documentação foi gerada utilizando Swagger.
+<ol>
+    
+<li>Criação da API sem segurança + testes no Postman;</li>
+<li>Inserção e configuração do swagger + testes no app/documentation ;</li>
+<li>Inserção do JWT + testes no Postman;</li>
+<li>Correção do Swagger(Inserindo a parte de Login e JWT em Authozire);</li>
+<li>Documentação (README) e testes(clone + passos do README);</li>
+</ol>
 
 ## Requisitos
 <ul>
 <li>PHP 8.0 ou superior</li>
 <li>Composer</li>
 <li>MySQL (ou outro banco de dados suportado pelo Laravel)</li>
-<li>Laravel 9.x</li>
-<li>Postman (para testes)</li>
+<li>Laravel 10.x</li>
+<li>Postman, insomnia ou até mesmo o Thunder Client(para testes)</li>
 <li>JWTAuth</li>
 <li>Swagger (para documentação)</li>
 </ul>
@@ -85,11 +90,11 @@ Listar todos os sabores:
 
 <li>Rota: GET /api/sabores
 <li>Autenticação: Requer Token JWT</li><br>
-![image](https://github.com/user-attachments/assets/ecb27c05-7c39-4410-a78d-3ca5ef62a532)
+<img src="https://github.com/user-attachments/assets/ecb27c05-7c39-4410-a78d-3ca5ef62a532" alt="Login">
 <br>
 
 <li>Exemplo de Requisição:</li><br>
-![image](https://github.com/user-attachments/assets/545cf924-3b8d-4e59-8aa6-cb0beb839a72)
+<img src="https://github.com/user-attachments/assets/545cf924-3b8d-4e59-8aa6-cb0beb839a72" alt="Listar todos">
 <br>
 
 
@@ -98,7 +103,8 @@ Buscar sabor por ID:
 <li>Rota: GET /api/sabores/{id}</li>
 <li>Autenticação: Requer Token JWT</li>
 <li>Exemplo de Requisição:</li><br>
-![image](https://github.com/user-attachments/assets/30186a08-e859-498d-a104-fc10060a86db)
+<img src="https://github.com/user-attachments/assets/30186a08-e859-498d-a104-fc10060a86db" alt="Busca por ID">
+
 <br>
 
 ### 3. Autenticação
@@ -115,6 +121,7 @@ Para autenticar um usuário e obter o token JWT:
 ```
 
 <li>Resposta:</li>
+
 ```
 {
   "token": "seu_token_jwt"
@@ -123,7 +130,7 @@ Para autenticar um usuário e obter o token JWT:
 
 ### 4. Documentação da API
 <br>
-![image](https://github.com/user-attachments/assets/021ffb8a-83cd-4d22-961c-a3bcd79769ec)
+<img src="https://github.com/user-attachments/assets/021ffb8a-83cd-4d22-961c-a3bcd79769ec" alt="Swagger">
 <br>
 
 A documentação da API pode ser acessada em **/api/documentation** após configurar o Swagger.

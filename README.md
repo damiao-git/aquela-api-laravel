@@ -26,20 +26,19 @@ Cada etapa do desenvolvimento dessa API foi testada separadamente seguindo a ord
 1. Clone o repositório para sua máquina local:
 
 ```
-git clone https://github.com/seu-usuario/api-sabores.git
-cd api-sabores
+git clone https://github.com/damiao-git/aquela-api-laravel.git
+cd aquela-api-laravel
+code .
 ```
 
 2. Instale as dependências do projeto:
 
 ```
-Copiar código
 composer install
 ```
 3. Crie um arquivo .env baseado no .env.example:
 
 ```
-Copiar código
 cp .env.example .env
 ```
 4. Configure as variáveis de ambiente no arquivo .env, especialmente as configurações do banco de dados:
@@ -55,19 +54,16 @@ DB_PASSWORD=sua_senha
 5. Gere a chave da aplicação:
 
 ```
-Copiar código
 php artisan key:generate
 ```
 6. Execute as migrações e popule o banco de dados:
 
 ```
-Copiar código
 php artisan migrate --seed
 ```
 7. Instale o pacote JWTAuth:
 
 ```
-Copiar código
 composer require tymon/jwt-auth
 php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
 php artisan jwt:secret
@@ -136,6 +132,10 @@ Para autenticar um usuário e obter o token JWT:
 A documentação da API pode ser acessada em **/api/documentation** após configurar o Swagger.
 
 ## Testes
+Foram feitos no total 5 testes de integração, dentre eles, temos 2 padrões criados pelo Laravel e 3 criados por mim para testar:
+<li>Lista completa</li>
+<li>Sabor individual</li>
+<li>Erro 404 se não achar sabor pelo id</li><br>
 
 Para executar os testes de integração:
 
